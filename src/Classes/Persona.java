@@ -4,12 +4,10 @@ package Classes;
 
 public class Persona {
     /* Atributs */
-    private static int contador = 0;
-    private static int MAXIM_PERSONES = 1000;
     private String nom;
     private String cognom1;
     private String cognom2;
-    private int id;
+    private static int id;
     private String passwd;
     private String DNI;
 
@@ -39,10 +37,6 @@ public class Persona {
         DNI = dnix;
     }
 
-    public void setContador(int n){
-        contador = contador + n;
-    }
-
     public void setId(int n){
         id=n;
     }
@@ -66,25 +60,14 @@ public class Persona {
         return passwd;
     }
 
-    public static int getContador(){
-        return contador;
-    }
-
-    public static int getMaximPersones(){
-        return MAXIM_PERSONES;
-    }
-
     public String getDNI(){
         return DNI;
     }
 
     /** METODES */
-    public static void augmentarPersona(){
-        contador = contador +1;
-    }
-
-    public static void eliminarPersona(){
-        contador = contador -1;
+    public static int generarID(){
+         id = id+1;
+         return id;
     }
 
     @Override
