@@ -12,7 +12,10 @@ public class Persona {
     private String DNI;
 
     /** CONSTRUCTOR */
-    public Persona() {
+    public Persona(String nomc, String cognom1c, String dnic) {
+        nom = nomc;
+        cognom1= cognom1c;
+        DNI=dnic;
     }
 
 

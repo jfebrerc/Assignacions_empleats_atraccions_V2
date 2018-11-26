@@ -2,6 +2,8 @@ package Biblioteques;
 
 import Classes.Persona;
 
+import java.util.ArrayList;
+
 public class Arrays {
     /** PERSONES */
     private static int contador = 0;
@@ -12,7 +14,8 @@ public class Arrays {
     public static int getMaximPersones(){
         return MAXIM_PERSONES;
     }
-    public static Persona[] arrayPersones = new Persona[MAXIM_PERSONES];
+    //public static Persona[] arrayPersones = new Persona[MAXIM_PERSONES];
+    public static ArrayList<Persona> arrayPersones = new ArrayList<Persona>();
     public static void augmentarPersona(){
         contador = contador +1;
     }

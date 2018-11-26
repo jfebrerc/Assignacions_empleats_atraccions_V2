@@ -11,8 +11,9 @@ public class Empleat extends Persona { //Comentaris al marge per als atributs
     private String dataFinalContracte;
     private String nomina;
 
-    public Empleat() {
-        super();
+    public Empleat(String nomc, String cognom1c, String dnic, String nominac) {
+        super(nomc, cognom1c, dnic);
+        nomina = nominac;
     }
 
     /** GETTERS */
