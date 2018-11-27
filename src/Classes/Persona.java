@@ -7,15 +7,18 @@ public class Persona {
     private String nom;
     private String cognom1;
     private String cognom2;
-    private static int id;
+    private int id;
     private String passwd;
     private String DNI;
+    private static int nextId;
 
     /** CONSTRUCTOR */
     public Persona(String nomc, String cognom1c, String dnic) {
         nom = nomc;
         cognom1= cognom1c;
         DNI=dnic;
+        id = nextId;
+        nextId++;
     }
 
 
@@ -55,7 +58,7 @@ public class Persona {
         return cognom2;
     }
 
-    public int getIdentificador() {
+    public int getId() {
         return id;
     }
 
@@ -68,11 +71,6 @@ public class Persona {
     }
 
     /** METODES */
-    public static int generarID(){
-         id = id+1;
-         return id;
-    }
-
     @Override
     public String toString() {
         String imprimir = String.format("|%-20d|", getNom()); /*getNom() + " " + getCognom1() + " " + getDNI();*/

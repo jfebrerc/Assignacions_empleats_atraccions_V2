@@ -14,9 +14,7 @@ public class Menu_empleats {
     private JPanel menu_empleats;
     private JButton enrereButton;
     private JButton testButton;
-    private JButton eliminarEmpleatButton;
     private JButton registrarEmpleatButton;
-    private JButton modificarEmpleatsButton;
     private JButton llistarEmpleatsButton;
 
     public Menu_empleats() {
@@ -48,6 +46,13 @@ public class Menu_empleats {
                     System.out.println(p);
                 }
                 JOptionPane.showMessageDialog(frame_menuEmpleats, "Empleats de prova carregats correctament");
+            }
+        });
+        enrereButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame_menuEmpleats.setVisible(false);
+                Main.main.mostrar_menu_principal();
             }
         });
     }

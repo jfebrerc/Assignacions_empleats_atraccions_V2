@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Gestio.Empleats.Menu_empleats">
-  <grid id="27dc6" binding="menu_empleats" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="menu_empleats" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="800" height="600"/>
@@ -22,7 +22,7 @@
       </component>
       <component id="40eb6" class="javax.swing.JButton" binding="enrereButton" default-binding="true">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Enrere"/>
@@ -30,18 +30,10 @@
       </component>
       <component id="e0c3b" class="javax.swing.JButton" binding="testButton" default-binding="true">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Test"/>
-        </properties>
-      </component>
-      <component id="c4dd2" class="javax.swing.JButton" binding="eliminarEmpleatButton" default-binding="true">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Eliminar empleat"/>
         </properties>
       </component>
       <component id="fdcec" class="javax.swing.JButton" binding="registrarEmpleatButton" default-binding="true">
@@ -52,20 +44,12 @@
           <text value="Registrar empleat"/>
         </properties>
       </component>
-      <component id="d5c49" class="javax.swing.JButton" binding="modificarEmpleatsButton" default-binding="true">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Modificar empleats"/>
-        </properties>
-      </component>
       <component id="9ad49" class="javax.swing.JButton" binding="llistarEmpleatsButton" default-binding="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Llistar empleats"/>
+          <text value="Gestio de empleats"/>
         </properties>
       </component>
     </children>

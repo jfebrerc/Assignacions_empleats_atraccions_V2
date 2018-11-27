@@ -1,8 +1,11 @@
 package Biblioteques;
 
+import Classes.Empleat;
 import Classes.Persona;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Arrays {
     /** PERSONES */
