@@ -31,7 +31,7 @@ public class Registrar_empleat {
                         Arrays.arrayPersones.add(new Empleat(nomText.getText(), cognomnsText.getText(),dniText.getText(),nominaText.getText()));
                         IO.imprimirTI(((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).toString());
                         IO.imprimirTI("Se ha registrat un empleat");
-                        JOptionPane.showMessageDialog(frame_menuAltaEmpleats, "Empleat donat de alta correctament");
+                        JOptionPane.showMessageDialog(frame_menuAltaEmpleats, "Se ha donat de alta correctament a " + ((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).getNom());
                         frame_menuAltaEmpleats.setVisible(false);
                         Gestio.Empleats.Menu_empleats.mostar_menu_empleats();
                         IO.imprimirTI("-------------------------------------------------------------------------");

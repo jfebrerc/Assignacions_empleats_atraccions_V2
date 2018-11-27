@@ -129,22 +129,7 @@ public class Gestionar_empleats extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //CARREGAR DADES ELEMENT
-                Object indices2=llistaEmpleats.getSelectedValue();
-                IO.imprimirTI("Contingut: "+ (indices2));
-                if (indices2 == null){
-                    JOptionPane.showMessageDialog(frame_llistaEmpleats, "Selecciona un empleat");
-                }else {
-                    try {
-                        nomText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getNom());
-                        cognomsText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getCognom1());
-                        dniText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getDNI());
-                        nominaText.setText(((Empleat)Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2))).getNomina());
-                        seleccio = Arrays.arrayPersones.indexOf(indices2);
-                        IO.imprimirTI("Element seleccionat: " + seleccio);
-                    } catch (Exception error) {
-                        IO.imprimirTI("Error al carregar empleat: " + error);
-                    }
-                }
+                Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
             }
         });
         BUIDARButton.addActionListener(new ActionListener() {
@@ -162,22 +147,7 @@ public class Gestionar_empleats extends javax.swing.JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(e.getClickCount()==2 && e.getButton() == MouseEvent.BUTTON1){
-                    Object indices2=llistaEmpleats.getSelectedValue();
-                    IO.imprimirTI("Contingut: "+ (indices2));
-                    if (indices2 == null){
-                        JOptionPane.showMessageDialog(frame_llistaEmpleats, "Selecciona un empleat");
-                    }else {
-                        try {
-                            nomText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getNom());
-                            cognomsText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getCognom1());
-                            dniText.setText(Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)).getDNI());
-                            nominaText.setText(((Empleat)Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2))).getNomina());
-                            seleccio = Arrays.arrayPersones.indexOf(indices2);
-                            IO.imprimirTI("Element seleccionat: " + seleccio);
-                        } catch (Exception error) {
-                            IO.imprimirTI("Error al carregar empleat: " + error);
-                        }
-                    }
+                    Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
                 }
             }
         });
