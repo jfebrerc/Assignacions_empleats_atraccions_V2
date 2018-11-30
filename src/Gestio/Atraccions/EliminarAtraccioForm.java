@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Gestio;
+package Gestio.Atraccions;
 
-import ClassesPrincipals.Atraccio;
-import Menu.*;
+import Classes.Atraccio;
 import java.util.Iterator;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

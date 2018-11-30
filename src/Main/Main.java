@@ -1,5 +1,7 @@
 package Main;
 
+import Gestio.Atraccions.MenuAtraccioForm;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +27,14 @@ public class main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame_main.dispose();
+            }
+        });
+        GESTIOZONESButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuAtraccioForm menu1 = new MenuAtraccioForm();
+                menu1.setVisible(true);
+                frame_main.setVisible(false);
             }
         });
     }
