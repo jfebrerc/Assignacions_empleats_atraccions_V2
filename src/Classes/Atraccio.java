@@ -169,7 +169,7 @@ public class Atraccio {
     
     @Override
     public String toString() {
-        String dadesAtraccio = idA + nom + tipusAtraccio + dataInauguracio + alturamin + accessibilitat + accesexpress;
+        String dadesAtraccio = String.format("%s %27s %30s %30s %39s %41s %47s",idA, nom, tipusAtraccio, dataInauguracio, alturamin, accessibilitat, accesexpress);
         return dadesAtraccio;
     }
     

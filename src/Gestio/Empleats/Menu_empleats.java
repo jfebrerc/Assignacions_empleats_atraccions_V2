@@ -1,9 +1,9 @@
 package Gestio.Empleats;
 
 import Biblioteques.Arrays;
-import Biblioteques.IO;
 import Classes.Empleat;
 import Classes.Persona;
+import Main.main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -52,7 +52,7 @@ public class Menu_empleats {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame_menuEmpleats.setVisible(false);
-                Main.main.mostrar_menu_principal();
+                main.mostrar_menu_principal();
             }
         });
     }

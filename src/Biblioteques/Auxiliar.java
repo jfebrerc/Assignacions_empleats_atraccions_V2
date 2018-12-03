@@ -64,7 +64,7 @@ public class Auxiliar {
     public static void llistar_Atraccions(JTextField textBusqueda, JList llistaAtraccions){
         String cerca = textBusqueda.getText();
         DefaultListModel d1m = new DefaultListModel();
-        String titol_columna = String.format("%s %s %s %18s %71s %69s %71s", "ID", "NOM", "TIPUS", "DATA INAUGURACIO", "ALTURA MIN", "ACCESSIBILITAT", "ACCES EXPRESS");
+        String titol_columna = String.format("%s %30s %35s %30s %30s %30s %30s", "ID", "NOM", "TIPUS", "DATA INAUGURACIO", "ALTURA MIN", "ACCESSIBILITAT", "ACCES EXPRESS");
         String divisor = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
         d1m.addElement(titol_columna);
         d1m.addElement(divisor);
