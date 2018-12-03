@@ -64,6 +64,24 @@ public class Registrar_assignacio {
                 }
             }
         });
+
+        seleccionarAtraccio.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Object indiceA=llistaAtraccions.getSelectedValue();
+                IO.imprimirTI("Contingut: "+ (indiceA));
+                if (indiceA == null){
+                    JOptionPane.showMessageDialog(frame_menuRegistrarAssignacio, "Selecciona una atraccio");
+                }else {
+                    try {
+                        atraccioSeleccionada.setText("Atraccio seleccionada: " + Atraccio.arrayAtraccio.get(Atraccio.arrayAtraccio.indexOf(indiceA)).getNom());
+                        seleccio_atraccio = Atraccio.arrayAtraccio.indexOf(indiceA);
+                    }catch (Exception error){
+                        IO.imprimirTI("Error al llistar atraccions a assignacions: " + error);
+                    }
+                }
+            }
+        });
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
