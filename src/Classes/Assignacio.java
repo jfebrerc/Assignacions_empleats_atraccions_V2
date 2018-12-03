@@ -9,7 +9,6 @@ public class Assignacio { //Comentaris al marge per als atributs
     private Atraccio atraccio;
     private String data;
     private static int nextId;
-    //xd
 
     public Assignacio(Empleat e, Atraccio a, String d) {
         empleat = e;

@@ -1,5 +1,6 @@
 package Main;
 
+import Classes.Assignacio;
 import Gestio.Atraccions.MenuAtraccioForm;
 
 import javax.swing.*;
@@ -35,6 +36,13 @@ public class main {
                 MenuAtraccioForm menu1 = new MenuAtraccioForm();
                 menu1.setVisible(true);
                 frame_main.setVisible(false);
+            }
+        });
+        GESTIOASIGGNACIONSButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame_main.setVisible(false);
+                Gestio.Assignacio_EA.Menu_assignacio.Menu_assignacio();
             }
         });
     }
