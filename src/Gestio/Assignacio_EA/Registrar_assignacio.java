@@ -22,9 +22,7 @@ public class Registrar_assignacio {
     private JButton assignarButton;
     private JButton cancelarButton;
     private JTextField buscarEmpleats;
-    private JButton buscarEButton;
     private JTextField buscarAtraccions;
-    private JButton buscarAButton;
     private JPanel registrarAssignacio;
     private JButton seleccionarEmpleat;
     private JButton seleccionarAtraccio;
