@@ -10,6 +10,7 @@
 
 package Biblioteques;
 
+import Classes.Assignacio;
 import Classes.Empleat;
 import Classes.Persona;
 
@@ -20,4 +21,5 @@ import java.util.Iterator;
 public class Arrays {
     /** PERSONES */
     public static ArrayList<Persona> arrayPersones = new ArrayList<Persona>();
+    public static ArrayList<Assignacio> arrayAssignacio = new ArrayList<Assignacio>();
 }

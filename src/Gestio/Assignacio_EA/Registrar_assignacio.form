@@ -112,12 +112,12 @@
           </component>
         </children>
       </scrollpane>
-      <component id="bff0e" class="javax.swing.JButton" binding="modificarButton" default-binding="true">
+      <component id="bff0e" class="javax.swing.JButton" binding="assignarButton" default-binding="true">
         <constraints>
           <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Modificar"/>
+          <text value="Assignar"/>
         </properties>
       </component>
       <component id="28bd9" class="javax.swing.JButton" binding="cancelarButton" default-binding="true">
@@ -142,6 +142,22 @@
         </constraints>
         <properties>
           <text value="Seleccionar"/>
+        </properties>
+      </component>
+      <component id="9dd2e" class="javax.swing.JLabel" binding="empleatSeleccionat">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="a420" class="javax.swing.JLabel" binding="atraccioSeleccionada">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
         </properties>
       </component>
     </children>
