@@ -8,8 +8,6 @@ import Classes.Atraccio;
 import Classes.Empleat;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
@@ -81,31 +79,14 @@ public class Registrar_assignacio {
                     IO.imprimirTI("Se ha intentat registrar una assignacio en algun camp buit");
                 }else {
                     try {
-                        IO.imprimirTI("Empleat posicio: " + seleccio_empleat);
-                        Arrays.arrayAssignacio.add(new Assignacio((Empleat) Arrays.arrayPersones.get(seleccio_empleat), Atraccio.arrayAtraccio.get(0), dataText.getText()));
+                        Arrays.arrayAssignacio.add(new Assignacio((Empleat) Arrays.arrayPersones.get(seleccio_empleat), Atraccio.arrayAtraccio.get(0), dataText.toString()));
                         IO.imprimirTI("Size: " + Arrays.arrayAssignacio.size());
-                        IO.imprimirTI(Arrays.arrayAssignacio.get(Arrays.arrayAssignacio.size()-1).toString());
+                        IO.imprimirTI(Arrays.arrayAssignacio.get(0).toString());
                         IO.imprimirTI("Se ha registrat un empleat");
                     }catch (Exception error){
                         IO.imprimirTI("Error al assignar: " + error);
                     }
                 }
-            }
-        });
-        buscarEmpleats.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarEmpleats, llistaEmpleats);
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarEmpleats, llistaEmpleats);
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarEmpleats, llistaEmpleats);
             }
         });
     }
