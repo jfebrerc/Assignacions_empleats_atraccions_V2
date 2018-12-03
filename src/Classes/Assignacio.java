@@ -48,7 +48,7 @@ public class Assignacio { //Comentaris al marge per als atributs
 
     @Override
     public String toString() {
-        String imprimir = empleat.getNom() + atraccio.getNom() + data;
+        String imprimir = empleat.getNom() + " " + atraccio.getNom()+ " " + data;
         return imprimir;
     }
 

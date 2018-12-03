@@ -79,7 +79,8 @@ public class Registrar_assignacio {
                     IO.imprimirTI("Se ha intentat registrar una assignacio en algun camp buit");
                 }else {
                     try {
-                        Arrays.arrayAssignacio.add(new Assignacio((Empleat) Arrays.arrayPersones.get(seleccio_empleat), Atraccio.arrayAtraccio.get(0), dataText.toString()));
+                        IO.imprimirTI("Empleat posicio: " + seleccio_empleat);
+                        Arrays.arrayAssignacio.add(new Assignacio((Empleat) Arrays.arrayPersones.get(seleccio_empleat), Atraccio.arrayAtraccio.get(0), dataText.getText()));
                         IO.imprimirTI("Size: " + Arrays.arrayAssignacio.size());
                         IO.imprimirTI(Arrays.arrayAssignacio.get(0).toString());
                         IO.imprimirTI("Se ha registrat un empleat");
