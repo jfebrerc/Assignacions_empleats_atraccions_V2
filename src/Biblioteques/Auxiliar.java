@@ -11,6 +11,7 @@
 
 package Biblioteques;
 
+import Classes.Atraccio;
 import Classes.Empleat;
 import Classes.Persona;
 
@@ -59,5 +60,19 @@ public class Auxiliar {
                 nominaText.setText("");
             }
         }
+    }
+    public static void llistar_Atraccions(JTextField textBusqueda, JList llistaAtraccions){
+        String cerca = textBusqueda.getText();
+        DefaultListModel d1m = new DefaultListModel();
+        String titol_columna = String.format("%s %s %s %18s %71s %69s %71s", "ID", "NOM", "TIPUS", "DATA INAUGURACIO", "ALTURA MIN", "ACCESSIBILITAT", "ACCES EXPRESS");
+        String divisor = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        d1m.addElement(titol_columna);
+        d1m.addElement(divisor);
+        Iterator<Atraccio> iteradorAtraccions = Atraccio.arrayAtraccio.iterator();
+        while (iteradorAtraccions.hasNext()){
+            Atraccio a = iteradorAtraccions.next();
+            d1m.addElement(a);
+        }
+        llistaAtraccions.setModel(d1m);
     }
 }

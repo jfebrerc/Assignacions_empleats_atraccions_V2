@@ -169,7 +169,7 @@ public class Atraccio {
     
     @Override
     public String toString() {
-        String dadesAtraccio = nom + tipusAtraccio + dataInauguracio + alturamin + accessibilitat + accesexpress;
+        String dadesAtraccio = idA + nom + tipusAtraccio + dataInauguracio + alturamin + accessibilitat + accesexpress;
         return dadesAtraccio;
     }
     

@@ -25,6 +25,7 @@ public class Menu_assignacio {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame_menuAssignacio.setVisible(false);
+                Registrar_assignacio.Menu_assignacio();
 
             }
         });
