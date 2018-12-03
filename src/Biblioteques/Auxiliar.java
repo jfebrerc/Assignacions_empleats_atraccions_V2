@@ -11,6 +11,7 @@
 
 package Biblioteques;
 
+import Classes.Assignacio;
 import Classes.Atraccio;
 import Classes.Empleat;
 import Classes.Persona;
@@ -72,6 +73,23 @@ public class Auxiliar {
         while (iteradorAtraccions.hasNext()){
             Atraccio a = iteradorAtraccions.next();
             d1m.addElement(a);
+        }
+        llistaAtraccions.setModel(d1m);
+    }
+
+    public static void llistar_Assignacio(JTextField textBusqueda, JList llistaAtraccions){
+        String cerca = textBusqueda.getText();
+        DefaultListModel d1m = new DefaultListModel();
+        String titol_columna = String.format("%s %18s %71s %69s", "ID", "EMPLEAT", "ATRACCIO", "DATA");
+        String divisor = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+        d1m.addElement(titol_columna);
+        d1m.addElement(divisor);
+        Iterator<Assignacio> iteradorAssignacions = Arrays.arrayAssignacio.iterator();
+        while (iteradorAssignacions.hasNext()){
+            Assignacio assign = iteradorAssignacions.next();
+            if (assign.toString().toLowerCase().contains(cerca.toLowerCase())){
+                d1m.addElement(assign);
+            }
         }
         llistaAtraccions.setModel(d1m);
     }

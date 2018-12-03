@@ -100,7 +100,13 @@ public class Registrar_assignacio {
                         Arrays.arrayAssignacio.add(new Assignacio((Empleat) Arrays.arrayPersones.get(seleccio_empleat), Atraccio.arrayAtraccio.get(seleccio_atraccio), dataText.getText()));
                         IO.imprimirTI("Size: " + Arrays.arrayAssignacio.size());
                         IO.imprimirTI(Arrays.arrayAssignacio.get(Arrays.arrayAssignacio.size()-1).toString());
-                        IO.imprimirTI("Se ha registrat un empleat");
+                        IO.imprimirTI("Se ha registrat una assignacio");
+                        JOptionPane.showMessageDialog(frame_menuRegistrarAssignacio, "Assignacio creada correctament");
+                        seleccio_empleat = -1;
+                        seleccio_atraccio = -1;
+                        dataText.setText("");
+                        empleatSeleccionat.setText("");
+                        atraccioSeleccionada.setText("");
                     }catch (Exception error){
                         IO.imprimirTI("Error al assignar: " + error);
                     }

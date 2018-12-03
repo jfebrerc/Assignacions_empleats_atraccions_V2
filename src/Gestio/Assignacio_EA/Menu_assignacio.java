@@ -29,6 +29,13 @@ public class Menu_assignacio {
 
             }
         });
+        GESTIONARASSIGNACIONSButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame_menuAssignacio.setVisible(false);
+                Gestio_assignacio.Gestio_assignacio_main();
+            }
+        });
     }
 
     public static void Menu_assignacio(){
