@@ -205,6 +205,7 @@ public class CreaAtraccioForm extends javax.swing.JFrame {
         Express.getText();
         
         Atraccio.arrayAtraccio.add(new Atraccio(nomAtraccio.getText(),tipusAtraccio.getText(),dataInnauguracio.getText(),alturaMin.getText(),accessibilitat.getText(),Express.getText()));
+        JOptionPane.showMessageDialog(this, "Atraccio registrada correctament");
         nomAtraccio.setText("");
         tipusAtraccio.setText("");
         dataInnauguracio.setText("");

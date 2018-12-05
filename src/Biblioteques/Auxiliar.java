@@ -72,7 +72,9 @@ public class Auxiliar {
         Iterator<Atraccio> iteradorAtraccions = Atraccio.arrayAtraccio.iterator();
         while (iteradorAtraccions.hasNext()){
             Atraccio a = iteradorAtraccions.next();
-            d1m.addElement(a);
+            if (a.toString().toLowerCase().contains(cerca.toLowerCase())){
+                d1m.addElement(a);
+            }
         }
         llistaAtraccions.setModel(d1m);
     }
