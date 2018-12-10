@@ -129,7 +129,7 @@ public class Gestionar_empleats extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //CARREGAR DADES ELEMENT
-                Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
+                seleccio = Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
             }
         });
         BUIDARButton.addActionListener(new ActionListener() {
@@ -147,7 +147,7 @@ public class Gestionar_empleats extends javax.swing.JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(e.getClickCount()==2 && e.getButton() == MouseEvent.BUTTON1){
-                    Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
+                    seleccio = Auxiliar.carregar_dades_empleats(llistaEmpleats, frame_llistaEmpleats, nomText, cognomsText, dniText, nominaText, seleccio);
                 }
             }
         });

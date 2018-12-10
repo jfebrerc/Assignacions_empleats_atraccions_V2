@@ -1,5 +1,6 @@
 package Gestio.Assignacio_EA;
 
+import Biblioteques.Arrays;
 import Gestio.Empleats.Menu_empleats;
 
 import javax.swing.*;
@@ -32,8 +33,12 @@ public class Menu_assignacio {
         GESTIONARASSIGNACIONSButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame_menuAssignacio.setVisible(false);
-                Gestio_assignacio.Gestio_assignacio_main();
+                if (Arrays.arrayAssignacio.isEmpty()){
+                    JOptionPane.showMessageDialog(frame_menuAssignacio, "No hi han assignacions registrades");
+                }else {
+                    frame_menuAssignacio.setVisible(false);
+                    Gestio_assignacio.Gestio_assignacio_main();
+                }
             }
         });
     }

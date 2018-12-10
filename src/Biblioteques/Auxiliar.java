@@ -39,7 +39,7 @@ public class Auxiliar {
     }
 
     /**FUNCIO PER A CARREGAR DADES ALS DIFERENTS CAMPS DE TEXT PER A MODIFICAR-LES*/
-    public static void carregar_dades_empleats(JList llistaEmpleats, JFrame frame_llistaEmpleats, JTextField nomText, JTextField cognomsText, JTextField dniText, JTextField nominaText, int seleccio){
+    public static int carregar_dades_empleats(JList llistaEmpleats, JFrame frame_llistaEmpleats, JTextField nomText, JTextField cognomsText, JTextField dniText, JTextField nominaText, int seleccio){
         Object indices2=llistaEmpleats.getSelectedValue();  //Es guarda la seleccio en un objecte
         IO.imprimirTI("Contingut: "+ (indices2));
         if (indices2 == null){  //Es comprova si hi ha algo seleccionat
@@ -61,6 +61,7 @@ public class Auxiliar {
                 nominaText.setText("");
             }
         }
+        return seleccio;
     }
     public static void llistar_Atraccions(JTextField textBusqueda, JList llistaAtraccions){
         String cerca = textBusqueda.getText();
