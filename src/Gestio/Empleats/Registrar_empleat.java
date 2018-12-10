@@ -7,6 +7,7 @@ import Classes.Empleat;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Biblioteques.Auxiliar;
 
 public class Registrar_empleat {
     private static JFrame frame_menuAltaEmpleats = new JFrame("panelAltaEmpleats");
@@ -32,6 +33,7 @@ public class Registrar_empleat {
                         IO.imprimirTI(((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).toString());
                         IO.imprimirTI("Se ha registrat un empleat");
                         JOptionPane.showMessageDialog(frame_menuAltaEmpleats, "Se ha donat de alta correctament a " + ((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).getNom());
+                        Auxiliar.log("Empleat registrat: " + ((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).getNom() + " " + ((Empleat) Arrays.arrayPersones.get(Arrays.arrayPersones.size()-1)).getDNI());
                         frame_menuAltaEmpleats.setVisible(false);
                         Gestio.Empleats.Menu_empleats.mostar_menu_empleats();
                         IO.imprimirTI("-------------------------------------------------------------------------");

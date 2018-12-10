@@ -51,17 +51,17 @@ public class Gestio_assignacio {
         buscarAssign.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarAssign, JlistAssign);
+                Auxiliar.llistar_Assignacio(buscarAssign, JlistAssign);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarAssign, JlistAssign);
+                Auxiliar.llistar_Assignacio(buscarAssign, JlistAssign);
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                Auxiliar.llistar_empleats(buscarAssign, JlistAssign);
+                Auxiliar.llistar_Assignacio(buscarAssign, JlistAssign);
             }
         });
         CARREGARButton.addActionListener(new ActionListener() {

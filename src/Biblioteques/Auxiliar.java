@@ -17,7 +17,13 @@ import Classes.Empleat;
 import Classes.Persona;
 
 import javax.swing.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
+import java.util.TimeZone;
 
 public class Auxiliar {
     /** FUNCIO PER A LLISTAR ELS EMPLEATS */
@@ -95,5 +101,17 @@ public class Auxiliar {
             }
         }
         llistaAtraccions.setModel(d1m);
+    }
+
+    public static void log(String s) throws IOException {
+        TimeZone tz = TimeZone.getTimeZone("CET"); // or PST, MID, etc ...
+        Date now = new Date();
+        DateFormat df = new SimpleDateFormat("yyyy.mm.dd hh:mm:ss a");
+        df.setTimeZone(tz);
+        String currentTime = df.format(now);
+        FileWriter aWriter = new FileWriter("E:\\Carpetes\\log.txt", true);
+        aWriter.write(currentTime + " - " + s + "\n");
+        aWriter.flush();
+        aWriter.close();
     }
 }

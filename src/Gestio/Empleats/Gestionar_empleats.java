@@ -28,6 +28,7 @@ public class Gestionar_empleats extends javax.swing.JFrame{
     private JButton modificarButton;
     private static JFrame frame_llistaEmpleats = new JFrame("LlistarPanel");
     int seleccio = -1;
+    int posicio = -1;
 
     public Gestionar_empleats() {
         llimpiarButton.addActionListener(new ActionListener() {
@@ -88,8 +89,11 @@ public class Gestionar_empleats extends javax.swing.JFrame{
                         if(dialogResult == 0) {
                             IO.imprimirTI("Opcio 'SI'");
                             IO.imprimirTI("Posicio: " + Arrays.arrayPersones.indexOf(indices2));
-                            IO.imprimirTI("Se ha eliminat el empleat: " + Arrays.arrayPersones.get(Arrays.arrayPersones.indexOf(indices2)));
+                            posicio = Arrays.arrayPersones.indexOf(indices2);
+                            IO.imprimirTI("Se ha eliminat el empleat: " + Arrays.arrayPersones.get(posicio));
                             Arrays.arrayPersones.remove(indices2);
+                            Auxiliar.log("Empleat eliminat: " + ((Empleat) Arrays.arrayPersones.get(posicio)).getNom() + " " + ((Empleat) Arrays.arrayPersones.get(posicio)).getDNI());
+                            posicio = -1;
                             seleccio = -1;
                             nomText.setText("");
                             cognomsText.setText("");
@@ -113,12 +117,14 @@ public class Gestionar_empleats extends javax.swing.JFrame{
                     JOptionPane.showMessageDialog(frame_llistaEmpleats, "Carrega un empleat per a modificar");
                 }else {
                     try {
+                        String anticNom=nomText.getText();
                         Arrays.arrayPersones.get(seleccio).setNom(nomText.getText());
                         Arrays.arrayPersones.get(seleccio).setCognom1(cognomsText.getText());
                         Arrays.arrayPersones.get(seleccio).setDNI(dniText.getText());
                         ((Empleat)Arrays.arrayPersones.get(seleccio)).setNomina(nominaText.getText());
                         Auxiliar.llistar_empleats(textBusqueda, llistaEmpleats);
                         JOptionPane.showMessageDialog(frame_llistaEmpleats, "Empleat " + Arrays.arrayPersones.get(seleccio).getNom()  +  " modificat correctament");
+                        Auxiliar.log("Empleat modificat: " + anticNom + " a: " + Arrays.arrayPersones.get(seleccio).getNom());
                     } catch (Exception error) {
                         IO.imprimirTI("Error al modificar: " + error);
                     }

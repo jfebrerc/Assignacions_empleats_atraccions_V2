@@ -48,7 +48,7 @@ public class Assignacio { //Comentaris al marge per als atributs
 
     @Override
     public String toString() {
-        String imprimir = String.format("%s %20s %70s %70s", id, empleat.getNom(), atraccio.getNom(), data);
+        String imprimir = String.format("%s %20s %20s %70s %70s", id, empleat.getNom(), empleat.getDNI(), atraccio.getNom(), data);
         return imprimir;
     }
 
