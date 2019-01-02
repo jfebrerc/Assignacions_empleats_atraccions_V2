@@ -1,6 +1,8 @@
 package Main;
 
+import Biblioteques.Arrays;
 import Classes.Assignacio;
+import Classes.Atraccio;
 import Gestio.Atraccions.MenuAtraccioForm;
 
 import javax.swing.*;
@@ -41,8 +43,12 @@ public class main {
         GESTIOASIGGNACIONSButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame_main.setVisible(false);
-                Gestio.Assignacio_EA.Menu_assignacio.Menu_assignacio();
+                if (Arrays.arrayPersones.isEmpty() || Atraccio.arrayAtraccio.isEmpty()){
+                    JOptionPane.showMessageDialog(frame_main, "No es poden registrar assignacions sense empleats o atraccions");
+                }else {
+                    frame_main.setVisible(false);
+                    Gestio.Assignacio_EA.Menu_assignacio.Menu_assignacio();
+                }
             }
         });
     }
